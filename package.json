@@ -2,9 +2,12 @@
   "name": "@bencelang/yarn-standard-version",
   "version": "0.1.0",
   "description": "Automated versioning & changelog generation",
-  "bin": "bin/yarn-standard-version.js",
-  "main": "dist/index.js",
-  "types": "types/index.d.ts",
+  "bin": {
+    "standard-version": "bin/index.js"
+  },
+  "engines": {
+    "node": ">=12.0"
+  },
   "scripts": {
     "lint": "tsc --noEmit",
     "build": "rimraf types && yarn build:bin && yarn build:lib",
@@ -13,25 +16,36 @@
   },
   "repository": "https://github.com/bencelang/yarn-standard-version",
   "author": "Bence Láng",
-  "license": "MIT",
+  "license": "ISC",
   "private": true,
   "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
     "@types/chai": "^4.2.9",
     "@types/mocha": "^7.0.1",
     "@types/node": "^13.7.4",
+    "@types/yaml": "^1.2.0",
     "@typescript-eslint/eslint-plugin": "^2.20.0",
     "@typescript-eslint/parser": "^2.20.0",
     "chai": "^4.2.0",
+    "commitizen": "^4.0.3",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.10.0",
     "eslint-plugin-prettier": "^3.1.2",
-    "lerna": "^3.20.0",
     "mocha": "^7.0.1",
     "prettier": "^1.19.1",
-    "rimraf": "^3.0.2"
+    "rimraf": "^3.0.2",
+    "typescript": "^3.8.2"
   },
   "dependencies": {
+    "chalk": "^3.0.0",
+    "colors": "^1.4.0",
+    "commander": "^4.1.1",
     "conventional-recommended-bump": "^6.0.5",
-    "standard-changelog": "^2.0.21"
+    "find-up": "^4.1.0",
+    "inquirer": "^7.0.4",
+    "ora": "^4.0.3",
+    "standard-changelog": "^2.0.21",
+    "yaml": "^1.7.2"
   }
 }

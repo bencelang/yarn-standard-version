@@ -10,9 +10,7 @@
   },
   "scripts": {
     "lint": "tsc --noEmit",
-    "build": "rimraf types && yarn build:bin && yarn build:lib",
-    "build:bin": "rimraf bin/*.js && tsc --noEmitOnError -p bin/",
-    "build:lib": "rimraf dist && tsc --noEmitOnError"
+    "build": "tsc --noEmitOnError"
   },
   "repository": "https://github.com/bencelang/yarn-standard-version",
   "author": "Bence Láng",

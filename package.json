@@ -36,7 +36,7 @@
     "typescript": "^3.8.2"
   },
   "dependencies": {
-    "chalk": "^3.0.0",
+    "chalk": "^4.0.0",
     "colors": "^1.4.0",
     "commander": "^4.1.1",
     "conventional-recommended-bump": "^6.0.5",
